@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Main from './react/Main/Main';
+import Todolist from './react/Todolist/Main';
+import Ecommerce from './react/E-commerce/Main'
+import './css/App.css';
+import { LinkContext } from './LinkContext'
+import "./img/fontello-d33de368/css/fontello.css"
 
-function App() {
+const App = () => {
+  const [link, setLink] = useState("http://localhost:5000")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <LinkContext.Provider value={{link, setLink}}>
+        <Route exact path='/' component={Main} />
+        <Route path='/todolist' component={Todolist} />
+        <Route path='/e-commerce' component={Ecommerce} />
+      </LinkContext.Provider>
+    </BrowserRouter>
+  )
 }
 
 export default App;

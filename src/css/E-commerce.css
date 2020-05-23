@@ -1,0 +1,274 @@
+.e-commerce .e-commerce_registration {
+  width: 100vw;
+  height: 100vh;
+  background-color: #EEA47F; }
+  .e-commerce .e-commerce_registration h1, .e-commerce .e-commerce_registration h2 {
+    background-color: #EEA47F; }
+  .e-commerce .e-commerce_registration h1 {
+    cursor: pointer; }
+  .e-commerce .e-commerce_registration h2 {
+    margin: 30px 0; }
+  .e-commerce .e-commerce_registration h5 {
+    margin: 0; }
+  .e-commerce .e-commerce_registration .e-commerce_form {
+    width: 60%; }
+    .e-commerce .e-commerce_registration .e-commerce_form .e-commerce_input {
+      padding: 10px;
+      width: 100%; }
+      .e-commerce .e-commerce_registration .e-commerce_form .e-commerce_input input {
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        border-radius: 10px;
+        border: 2px solid grey; }
+        .e-commerce .e-commerce_registration .e-commerce_form .e-commerce_input input:focus {
+          border: 2px solid #00539C;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+    .e-commerce .e-commerce_registration .e-commerce_form p {
+      color: #ff1100; }
+  .e-commerce .e-commerce_registration .e-commerce_info {
+    background-color: #EEA47F; }
+  .e-commerce .e-commerce_registration span:hover {
+    text-decoration: underline;
+    cursor: pointer; }
+
+.e-commerce .e-commerce_content {
+  padding: 0 !important; }
+  .e-commerce .e-commerce_content .e-commerce_content_banner {
+    margin-top: 20px; }
+    .e-commerce .e-commerce_content .e-commerce_content_banner img {
+      width: 100%; }
+  .e-commerce .e-commerce_content .e-commerce_content_bars {
+    color: #00539C; }
+
+.e-commerce_contentparticular {
+  padding: 0 !important; }
+  .e-commerce_contentparticular .e-commerce_contentparticular_name {
+    padding: 20px 0 20px 10px;
+    color: #00539C; }
+  .e-commerce_contentparticular .e-commerce_contentparticular_longitem {
+    padding: 30px 0;
+    color: #00539C; }
+    .e-commerce_contentparticular .e-commerce_contentparticular_longitem .e-commerce_contentparticular_longitem_image {
+      margin-left: 16px;
+      width: 240px;
+      height: 180px;
+      background-color: white; }
+      .e-commerce_contentparticular .e-commerce_contentparticular_longitem .e-commerce_contentparticular_longitem_image img {
+        width: 120px; }
+    .e-commerce_contentparticular .e-commerce_contentparticular_longitem .e-commerce_contentparticular_longitem_text {
+      margin-left: 16px; }
+  .e-commerce_contentparticular a:nth-child(odd) .e-commerce_contentparticular_longitem {
+    background-color: rgba(238, 164, 127, 0.6); }
+  .e-commerce_contentparticular a:nth-child(even) .e-commerce_contentparticular_longitem {
+    background-color: #EEA47F; }
+  .e-commerce_contentparticular a:last-child .e-commerce_contentparticular_longitem {
+    margin-bottom: 20px; }
+  .e-commerce_contentparticular a:first-child .e-commerce_contentparticular_longitem {
+    margin-top: 20px; }
+
+.e-commerce_itemparticular {
+  padding: 0; }
+  .e-commerce_itemparticular .e-commerce_productpagecontent {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #00539C; }
+    .e-commerce_itemparticular .e-commerce_productpagecontent img {
+      width: 100%; }
+    .e-commerce_itemparticular .e-commerce_productpagecontent h1 {
+      margin: 30px 0; }
+    .e-commerce_itemparticular .e-commerce_productpagecontent h1, .e-commerce_itemparticular .e-commerce_productpagecontent h2, .e-commerce_itemparticular .e-commerce_productpagecontent h5 {
+      padding-left: 30px; }
+    .e-commerce_itemparticular .e-commerce_productpagecontent .e-commerce_productpagecontent_info {
+      padding-bottom: 10px;
+      border-bottom: 2px solid #454545; }
+    .e-commerce_itemparticular .e-commerce_productpagecontent .e-commerce_productpagecontent_buttons {
+      margin-top: 20px; }
+    .e-commerce_itemparticular .e-commerce_productpagecontent .e-commerce_productpagecontent_image {
+      margin-bottom: 30px; }
+    .e-commerce_itemparticular .e-commerce_productpagecontent .e-commerce_productpagecontent_description {
+      margin-bottom: 30px; }
+
+.e-commerce_topbar {
+  background-color: #EEA47F;
+  width: 100%; }
+  .e-commerce_topbar a {
+    color: #00539C;
+    text-decoration: none; }
+  .e-commerce_topbar .e-commerce_topbar_navbar {
+    padding: 16px; }
+    .e-commerce_topbar .e-commerce_topbar_navbar h2 {
+      font-size: 170%; }
+    .e-commerce_topbar .e-commerce_topbar_navbar .e-commerce_topbar_dropdown {
+      margin-left: 30px; }
+      .e-commerce_topbar .e-commerce_topbar_navbar .e-commerce_topbar_dropdown .e-commerce_topbar_dropdown_categories .category {
+        font-size: 110%;
+        padding: 6px;
+        font-weight: bold;
+        border-radius: 5px;
+        margin: 0 10px;
+        cursor: pointer;
+        -webkit-transition: background-color 0.5s;
+        -o-transition: background-color 0.5s;
+        transition: background-color 0.5s; }
+        .e-commerce_topbar .e-commerce_topbar_navbar .e-commerce_topbar_dropdown .e-commerce_topbar_dropdown_categories .category a {
+          -webkit-transition: color 0.5s;
+          -o-transition: color 0.5s;
+          transition: color 0.5s; }
+        .e-commerce_topbar .e-commerce_topbar_navbar .e-commerce_topbar_dropdown .e-commerce_topbar_dropdown_categories .category:hover {
+          background-color: #00539C; }
+          .e-commerce_topbar .e-commerce_topbar_navbar .e-commerce_topbar_dropdown .e-commerce_topbar_dropdown_categories .category:hover a {
+            color: white; }
+    @media (min-width: 992px) {
+      .e-commerce_topbar .e-commerce_topbar_navbar .e-commerce_topbar_buttons {
+        border-left: 2px solid #00539C; } }
+    .e-commerce_topbar .e-commerce_topbar_navbar i {
+      cursor: pointer;
+      font-size: 160%;
+      border: 1px solid #00539C;
+      border-radius: 18px;
+      color: #00539C;
+      -webkit-transition: background-color 0.5s, color 0.5s;
+      -o-transition: background-color 0.5s, color 0.5s;
+      transition: background-color 0.5s, color 0.5s; }
+      .e-commerce_topbar .e-commerce_topbar_navbar i:hover {
+        background-color: #00539C;
+        color: white; }
+  .e-commerce_topbar .e-commerce_topbar_cart {
+    width: 360px;
+    z-index: 100;
+    color: #00539C;
+    background-color: #EEA47F;
+    margin-top: 30px;
+    position: absolute;
+    border: 1px solid #00539C;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 2px 2px 4px #505050;
+    box-shadow: 2px 2px 4px #505050;
+    right: 2%; }
+    .e-commerce_topbar .e-commerce_topbar_cart h3 {
+      text-align: center; }
+    .e-commerce_topbar .e-commerce_topbar_cart .e-commerce_topbar_cart_shortItem {
+      border-bottom: 2px solid #454545;
+      padding: 10px 0; }
+      .e-commerce_topbar .e-commerce_topbar_cart .e-commerce_topbar_cart_shortItem img {
+        width: 50px;
+        height: 50px; }
+      .e-commerce_topbar .e-commerce_topbar_cart .e-commerce_topbar_cart_shortItem:last-child {
+        border-bottom: none; }
+      .e-commerce_topbar .e-commerce_topbar_cart .e-commerce_topbar_cart_shortItem .e-commerce_topbar_cart_shortItem_delete i {
+        cursor: pointer;
+        -webkit-transition: background-color 0.5s, color 0.5s;
+        -o-transition: background-color 0.5s, color 0.5s;
+        transition: background-color 0.5s, color 0.5s;
+        padding: 5px;
+        border-radius: 20px; }
+        .e-commerce_topbar .e-commerce_topbar_cart .e-commerce_topbar_cart_shortItem .e-commerce_topbar_cart_shortItem_delete i:hover {
+          color: white;
+          background-color: #00539C; }
+
+.e-commerce_content_footer {
+  padding: 20px 0;
+  background-color: #EEA47F;
+  height: 200px; }
+  .e-commerce_content_footer u {
+    cursor: pointer; }
+  .e-commerce_content_footer h5 {
+    margin: 30px 0; }
+
+.e-commerce_button {
+  width: 100px;
+  height: 38px;
+  border: 1px solid #00539C;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #00539C;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  -o-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 10px; }
+  .e-commerce_button:hover {
+    background-color: #00539C;
+    color: #FFF; }
+
+.e-commerce_content_bar {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #454545; }
+  .e-commerce_content_bar a {
+    color: #00539C; }
+  .e-commerce_content_bar:last-child {
+    border: none; }
+  .e-commerce_content_bar .e-commerce_content_bar_itemshort {
+    padding: 0;
+    margin-top: 30px;
+    cursor: pointer; }
+    .e-commerce_content_bar .e-commerce_content_bar_itemshort .e-commerce_content_bar_itemshort_image {
+      padding: 5px 0;
+      width: 220px;
+      height: 240px;
+      overflow: hidden; }
+      .e-commerce_content_bar .e-commerce_content_bar_itemshort .e-commerce_content_bar_itemshort_image img {
+        width: 100%;
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: -webkit-transform 0.5s;
+        -o-transition: transform 0.5s;
+        transition: transform 0.5s;
+        transition: transform 0.5s, -webkit-transform 0.5s;
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8); }
+      .e-commerce_content_bar .e-commerce_content_bar_itemshort .e-commerce_content_bar_itemshort_image:hover img {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); }
+
+.e-commerce_contentcart {
+  padding: 0;
+  color: #00539C; }
+  .e-commerce_contentcart .e-commerce_contentcart_content {
+    margin-top: 20px;
+    min-height: calc(100vh - 200px); }
+    .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products {
+      margin-top: 20px; }
+      .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products h1 {
+        text-align: center; }
+      .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products .e-commerce_contentcart_content_products_item .item_image {
+        margin: 20px; }
+        .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products .e-commerce_contentcart_content_products_item .item_image img {
+          width: 100%;
+          height: 100%; }
+      .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products .e-commerce_contentcart_content_products_item .item_info {
+        margin: 20px; }
+      .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products .e-commerce_contentcart_content_products_item .item_amount {
+        margin: 0; }
+        .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products .e-commerce_contentcart_content_products_item .item_amount label {
+          margin: 0; }
+          .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products .e-commerce_contentcart_content_products_item .item_amount label h5 {
+            margin: 0; }
+        .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products .e-commerce_contentcart_content_products_item .item_amount input {
+          width: 30%; }
+      .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products .e-commerce_contentcart_content_products_item .item_remove i {
+        cursor: pointer;
+        -webkit-transition: background-color 0.5s, color 0.5s;
+        -o-transition: background-color 0.5s, color 0.5s;
+        transition: background-color 0.5s, color 0.5s;
+        padding: 5px;
+        border-radius: 20px; }
+        .e-commerce_contentcart .e-commerce_contentcart_content .e-commerce_contentcart_content_products .e-commerce_contentcart_content_products_item .item_remove i:hover {
+          color: white;
+          background-color: #00539C; }
