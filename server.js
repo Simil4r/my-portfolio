@@ -26,19 +26,19 @@ connection.once('open', ()=>{
 
 
 //todolist
-const usersRouter = require('./routes/users');
-const elementsRouter = require('./routes/elements');
+const usersRouter = require('./server/routes/users');
+const elementsRouter = require('./server/routes/elements');
 
-app.use('/users', usersRouter);
-app.use('/elements', elementsRouter);
+app.use('server/users', usersRouter);
+app.use('server/elements', elementsRouter);
 
 //e-commerce
-const productsRouter = require('./routes/products');
-const cartsRouter = require('./routes/carts');
+const productsRouter = require('./server/routes/products');
+const cartsRouter = require('./server/routes/carts');
 
-app.use('/products', productsRouter);
-app.use('/carts', cartsRouter);
-app.use('/uploads',express.static('uploads'));
+app.use('server/products', productsRouter);
+app.use('server/carts', cartsRouter);
+app.use('server/uploads',express.static('uploads'));
 
 
 app.get('/*', function (req, res) {
