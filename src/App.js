@@ -11,7 +11,7 @@ import "./img/fontello-d33de368/css/fontello.css"
 const App = () => {
   const [link, setLink] = useState("http://localhost:5000")
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="michalwarchol.pl">
       <LinkContext.Provider value={{link, setLink}}>
         <Route exact path='/' component={Main} />
         <Route path='/todolist' component={Todolist} />
