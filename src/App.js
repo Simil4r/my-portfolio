@@ -9,7 +9,7 @@ import { LinkContext } from './LinkContext'
 import "./img/fontello-d33de368/css/fontello.css"
 
 const App = () => {
-  const [link, setLink] = useState("http://localhost:5000")
+  const [link, setLink] = useState("https://michalwarchol.pl")
   return (
     <BrowserRouter basename="michalwarchol.pl">
       <LinkContext.Provider value={{link, setLink}}>
