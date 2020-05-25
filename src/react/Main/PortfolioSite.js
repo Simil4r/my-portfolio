@@ -5,7 +5,7 @@ const PortfolioSite = props => {
     return (
         <div className="col-12 col-xl-6">
             <h2>{props.title}</h2>
-            <Link to={"/e-commerce"}>
+            <Link to={props.link}>
                 <div className={"portfolio_site_image"}>
                     <img src={props.img} alt={"not found"} />
                 </div>
