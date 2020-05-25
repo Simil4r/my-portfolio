@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 const dotenv = require('dotenv').config()
 // Initialize connection to database
-const dbUrl = process.env.ATLAS.URI,
+const dbUrl = process.env.ATLAS_URI,
       dbOptions = {
         useNewUrlParser: true,
         useFindAndModify: false,
