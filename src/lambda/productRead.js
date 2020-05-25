@@ -6,10 +6,11 @@ exports.handler = async (event, context) => {
     let obj = JSON.parse(event.body)
     try {
         let products = []
+        let response = {}
         switch (obj.action) {
             case "find":
                 products = await Product.find({ category: obj.name })
-                    let response = {
+                    response = {
                         msg: "Products successfully found",
                         data: products
                     }
@@ -20,7 +21,7 @@ exports.handler = async (event, context) => {
 
             case "findRecommended":
                 products = await Product.find({ recommended: true })
-                    let response = {
+                    response = {
                         msg: "Products successfully found",
                         data: products
                     }
@@ -28,7 +29,7 @@ exports.handler = async (event, context) => {
                     statusCode: 200,
                     body: JSON.stringify(response)
                 }
-                
+
             default: console.log("default")
         }
 
