@@ -8,29 +8,27 @@ exports.handler = async (event, context) => {
         let products = []
         switch (obj.action) {
             case "find":
-                products = await Product.find({ category: obj.name }),
-                    response = {
+                products = await Product.find({ category: obj.name })
+                    let response = {
                         msg: "Products successfully found",
                         data: products
                     }
-
                 return {
                     statusCode: 200,
                     body: JSON.stringify(response)
                 }
-                break;
+
             case "findRecommended":
-                products = await Product.find({ recommended: true }),
-                    response = {
+                products = await Product.find({ recommended: true })
+                    let response = {
                         msg: "Products successfully found",
                         data: products
                     }
-
                 return {
                     statusCode: 200,
                     body: JSON.stringify(response)
                 }
-                break;
+                
             default: console.log("default")
         }
 
