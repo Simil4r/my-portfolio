@@ -20,6 +20,10 @@ const Bar = props => {
         }
         else{
             fetch('/.netlify/functions/productRead', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 body: JSON.stringify({name: props.name})
             })
                 .then(response=>response.json())
