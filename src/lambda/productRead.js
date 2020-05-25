@@ -5,9 +5,10 @@ exports.handler = async (event, context) => {
     context.callbackWaitsForEmptyEventLoop = false
     let obj = JSON.parse(event.body)
     try {
+        let products = []
         switch (obj.action) {
             case "find":
-                const products = await Product.find({ category: obj.name }),
+                products = await Product.find({ category: obj.name }),
                     response = {
                         msg: "Products successfully found",
                         data: products
@@ -19,7 +20,7 @@ exports.handler = async (event, context) => {
                 }
                 break;
             case "findRecommended":
-                const products = await Product.find({ recommended: true }),
+                products = await Product.find({ recommended: true }),
                     response = {
                         msg: "Products successfully found",
                         data: products
