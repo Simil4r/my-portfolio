@@ -11,7 +11,7 @@ import "./img/fontello-d33de368/css/fontello.css"
 const App = () => {
   const [link, setLink] = useState("https://michalwarchol.pl")
   return (
-    <BrowserRouter basename="https://michalwarchol.netlify.app/">
+    <BrowserRouter>
       <LinkContext.Provider value={{link, setLink}}>
         <Route exact path='/' component={Main} />
         <Route path='/todolist' component={Todolist} />
