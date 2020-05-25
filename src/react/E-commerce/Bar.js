@@ -10,7 +10,14 @@ const Bar = props => {
     const {link} = useContext(LinkContext)
     useEffect(() => {
         if(props.name==="Recommended"){
-            axios.post(link+'/products/findRecommended')
+            fetch('/.netlify/functions/productRead', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({action: "findRecommended"})
+            })
+            .then(response=>response.json())
             .then(res=>{
                 var products = res.data.map((element, index)=>{
                     return <Link to={"/e-commerce/"+element.category+"/"+element._id} className="d-flex justify-content-center col-sm-12 col-md-6 col-lg-3" key={index} ><Item product={element}/></Link>
@@ -24,7 +31,7 @@ const Bar = props => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({name: props.name})
+                body: JSON.stringify({name: props.name, action: "find"})
             })
                 .then(response=>response.json())
                 .then(res=>{
