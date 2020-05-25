@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
   console.log(event)
   try {
     // Use Product.Model to find all products
-    const products = await Product.find({category: event.body.name}),
+    const products = await Product.find({category: JSON.parse(event.body.name)}),
           response = {
             msg: "Products successfully found",
             data: products
