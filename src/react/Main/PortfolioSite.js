@@ -1,15 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom"
 
 const PortfolioSite = props => {
+    const visitSubPage = () => {
+        window.open(props.link, '_blank');
+    };
     return (
         <div className="col-12 col-xl-6">
             <h2>{props.title}</h2>
-            <Link to={"/e-commerce"}>
-                <div className={"portfolio_site_image"}>
-                    <img src={props.img} alt={"not found"} />
-                </div>
-            </Link>
+            <div className={"portfolio_site_image"} onClick={visitSubPage}>
+                <img src={props.img} alt={"not found"} />
+            </div>
             <h4><a href={props.gitLink}>Git repository</a></h4>
         </div>
     )
