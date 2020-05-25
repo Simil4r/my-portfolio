@@ -17,6 +17,7 @@ exports.handler = async (event, context) => {
                     statusCode: 200,
                     body: JSON.stringify(response)
                 }
+                break;
             case "findRecommended":
                 const products = await Product.find({ recommended: true }),
                     response = {
@@ -28,6 +29,8 @@ exports.handler = async (event, context) => {
                     statusCode: 200,
                     body: JSON.stringify(response)
                 }
+                break;
+            default: console.log("default")
         }
 
     } catch (err) {
