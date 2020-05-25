@@ -9,7 +9,7 @@ import { LinkContext } from './LinkContext'
 import "./img/fontello-d33de368/css/fontello.css"
 
 const App = () => {
-  const [link, setLink] = useState("https://michalwarchol.pl")
+  const [link, setLink] = useState("https://michalwarchol.netlify.app")
   return (
     <BrowserRouter>
       <LinkContext.Provider value={{link, setLink}}>
