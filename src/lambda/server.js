@@ -4,7 +4,8 @@ const dotenv = require('dotenv').config()
 const dbUrl = process.env.ATLAS.URI,
       dbOptions = {
         useNewUrlParser: true,
-        useFindAndModify: false
+        useFindAndModify: false,
+        useCreateIndex: true
       }
 // Set DB from mongoose connection
 mongoose.connect(dbUrl, dbOptions)

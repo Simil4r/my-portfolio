@@ -33,10 +33,10 @@ app.use('server/users', usersRouter);
 app.use('server/elements', elementsRouter);
 
 //e-commerce
-const productsRouter = require('./server/routes/products');
+//const productsRouter = require('./server/routes/products');
 const cartsRouter = require('./server/routes/carts');
 
-app.use('server/products', productsRouter);
+//app.use('server/products', productsRouter);
 app.use('server/carts', cartsRouter);
 app.use('server/uploads',express.static('uploads'));
 

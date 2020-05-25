@@ -19,8 +19,7 @@ const Bar = props => {
             })
         }
         else{
-            fetch('/.netlify/functions/productRead')
-                .then(response=>response.json())
+            axios.post('/.netlify/functions/products/find', {name: props.name})
                 .then(res=>{
                     var products = res.data.map((element, index)=>{
                         return <Link to={"/e-commerce/"+element.category+"/"+element._id} className="d-flex justify-content-center col-sm-12 col-md-6 col-lg-3" key={index}><Item product={element}/></Link>
