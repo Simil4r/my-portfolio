@@ -19,7 +19,9 @@ const Bar = props => {
             })
         }
         else{
-            fetch('/.netlify/functions/productRead')
+            fetch('/.netlify/functions/productRead', {
+                body: JSON.stringify({name: props.name})
+            })
                 .then(response=>response.json())
                 .then(res=>{
                     var products = res.data.map((element, index)=>{
