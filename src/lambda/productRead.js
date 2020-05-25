@@ -4,7 +4,7 @@ import Product from './product-model'
 exports.handler = async (event, context) => {
   context.callbackWaitsForEmptyEventLoop = false
   let obj = JSON.parse(event)
-  console.log(obj.body.name)
+  console.log(obj)
   try {
     // Use Product.Model to find all products
     const products = await Product.find({category: event.body.name}),
