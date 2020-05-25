@@ -42,9 +42,10 @@ app.use('server/uploads',express.static('uploads'));
 
 
 app.get('/*', function (req, res) {
+    console.log(__dirname)
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
-
+  
 app.listen(port, ()=>{
     console.log('Server is running on port '+port);
 })
