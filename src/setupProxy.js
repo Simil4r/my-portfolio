@@ -7,3 +7,11 @@ module.exports = function(app) {
     }
   }))
 }
+module.exports = function(app) {
+  app.use(proxy('/.netlify/large-media/', {
+    target: 'http://localhost:5000/',
+    "pathRewrite": {
+      "^/\\.netlify/large-media": ""
+    }
+  }))
+}
