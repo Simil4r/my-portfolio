@@ -6,7 +6,7 @@ const ItemShort = props => {
     return(
         <div className='e-commerce_content_bar_itemshort d-flex flex-column'>
             <div className='e-commerce_content_bar_itemshort_image d-flex justify-content-center align-items-center'>
-                <img src={"/"+props.product.imageLeader} alt='not found'/>
+                <img src={"../../img/"+props.product.imageLeader} alt='not found'/>
             </div>
             <div className='e-commerce_content_bar_itemshort_info d-flex flex-column align-items-center'>
                 <span>{props.product.name}</span>
