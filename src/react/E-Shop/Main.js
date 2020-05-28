@@ -1,6 +1,6 @@
 import React from 'react'
 import ContentEntry from './ContentEntry'
-import "../../css/e-shop.css"
+import "../../css/E-shop.css"
 
 
 const Main = () => {
