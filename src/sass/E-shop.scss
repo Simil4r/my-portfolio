@@ -1,0 +1,17 @@
+//variables
+$mint: #00cf91;
+
+//styles
+
+.e-shop{
+    padding: 0;
+    margin: 0;
+    color: $mint;
+    .text_left{
+        min-height: 100vh;
+        margin-left: 60px;
+    }
+    .image_side{
+        min-height: 100vh;
+    }
+}

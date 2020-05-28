@@ -1,0 +1,9 @@
+.e-shop {
+  padding: 0;
+  margin: 0;
+  color: #00cf91; }
+  .e-shop .text_left {
+    min-height: 100vh;
+    margin-left: 60px; }
+  .e-shop .image_side {
+    min-height: 100vh; }
