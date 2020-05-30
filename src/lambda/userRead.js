@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
     try {
         switch (obj.action) {
             case "findUser":
-                await User.find({username: obj.username}, (err, users)=>{
+                await User.find({ username: obj.username }, (err, users)=>{
                     if(err) return {statusCode: 404, body: JSON.stringify({err: "error"})}
                     return {
                         statusCode: 200,
