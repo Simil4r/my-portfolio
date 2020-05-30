@@ -44,7 +44,14 @@ class Registration extends Component {
 
     handleClick = () => {
         var ready = true;
-        axios.get(this.context.link+'/users')
+        fetch('/.netlify/functions/userRead', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({username: this.state.username, action: "findUser"})
+        })
+        .then(response=>response.json())
             .then(res=>{
                 var users = res.data.map(user => user.username)
                 if(users.indexOf(this.state.username)!==-1){
@@ -61,12 +68,15 @@ class Registration extends Component {
                 }
                 if(ready){
                     this.setState({ready: true})
-                    const user = {
-                        username: this.state.username,
-                        password: this.state.password
-                    }
-                    axios.post(this.context.link+'/users/add', user)
-                        .then(window.open('http://localhost:3000/todolist'))
+                    fetch('/.netlify/functions/userRead', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({username: this.state.username, password: this.state.password ,action: "add"})
+                    })
+                    .then(response=>response.json())
+                    .then(window.open('http://localhost:3000/todolist'))
                 }else{
                     this.setState({ready: false})
                 }
