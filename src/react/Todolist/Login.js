@@ -17,12 +17,15 @@ const Login = props => {
         ref.current.focus()
     }
     const handleClick = () => {
-        const user = {
-            username: username,
-            password: password
-        }
-        axios.post(link + '/users/login', user)
-            .then(res => {
+        fetch('/.netlify/functions/userRead', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({username: username, password: password, action: "login"})
+        })
+        .then(response=>response.json())
+        .then(res => {
                 setUser(username)
                 props.history.push("/todolist")
             }).catch(err => console.log(err))
