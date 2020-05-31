@@ -23,6 +23,7 @@ const Login = props => {
         })
         .then(response=>response.json())
         .then(res => {
+                console.log(res)
                 setUser(username)
                 props.history.push("/todolist")
             }).catch(err => console.log(err))
