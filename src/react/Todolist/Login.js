@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import Logo from './Logo';
 import SubmitButton from './SubmitButton';
 import { UserContext } from './UserContext';
-import axios from 'axios'
-import { LinkContext } from '../../LinkContext';
 
 const Login = props => {
     const [username, setUsername] = useState("")
@@ -12,7 +10,6 @@ const Login = props => {
     const userNameInput = React.createRef();
     const passwordInput = React.createRef();
     const {setUser} = useContext(UserContext)
-    const {link} = useContext(LinkContext)
     const inputFocus = (ref) => {
         ref.current.focus()
     }

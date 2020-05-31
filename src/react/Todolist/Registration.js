@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import axios from 'axios'
 import Logo from './Logo'
 import SubmitButton from './SubmitButton'
 import {LinkContext} from '../../LinkContext'
 
 class Registration extends Component {
     static contextType = LinkContext
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             username: '',
             password: '',
@@ -53,8 +52,8 @@ class Registration extends Component {
         })
         .then(response=>response.json())
             .then(res=>{
-                var users = res.data.map(user => user.username)
-                if(users.indexOf(this.state.username)!==-1){
+                console.log(res)
+                if(res.data===this.state.username){
                     ready = false;
                 }
                 if(this.state.username.length<4){
@@ -73,10 +72,12 @@ class Registration extends Component {
                         headers: {
                             'Content-Type': 'application/json',
                         },
-                        body: JSON.stringify({username: this.state.username, password: this.state.password ,action: "add"})
+                        body: JSON.stringify({username: this.state.username, password: this.state.password, action: "add"})
                     })
                     .then(response=>response.json())
-                    .then(window.open('http://localhost:3000/todolist'))
+                    .then(res=>{
+                        console.log(res)
+                        this.props.history.push("/todolist")})
                 }else{
                     this.setState({ready: false})
                 }
