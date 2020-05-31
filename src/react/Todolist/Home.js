@@ -5,8 +5,8 @@ import { LinkContext } from '../../LinkContext'
 import { UserContext } from './UserContext';
 
 const Home = () => {
-    const {link} = useContext(LinkContext)
-    const {user} = useContext(UserContext)
+    const { link } = useContext(LinkContext)
+    const { user } = useContext(UserContext)
     const [date, setDate] = useState(new Date())
     const [data, setData] = useState([])
 
@@ -14,14 +14,19 @@ const Home = () => {
         setDate(date);
     }
 
-
-
     useEffect(() => {
-        axios.post(link + '/elements/select',
-            {
+        fetch('/.netlify/functions/elementRead', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
                 username: user,
-                date: date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear()
+                date: date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear(),
+                action: "select"
             })
+        })
+        then(response => response.json())
             .then(res => {
                 setData(res.data)
             })
@@ -29,11 +34,18 @@ const Home = () => {
     }, [date, link, user])
 
     const getElements = () => {
-        axios.post(link + '/elements/select',
-            {
+        fetch('/.netlify/functions/elementRead', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
                 username: user,
-                date: date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear()
+                date: date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear(),
+                action: "select"
             })
+        })
+        then(response => response.json())
             .then(res => {
                 setData(res.data)
             })
@@ -41,15 +53,15 @@ const Home = () => {
     }
 
     return (
-         <div className="todolist container-fluid d-flex justify-content-center">
-            {user?<Content
+        <div className="todolist container-fluid d-flex justify-content-center">
+            {user ? <Content
                 data={data}
                 username={user}
                 getElements={getElements}
                 handleDate={handleDate} />
-            :<h1 className="d-flex align-items-center">In order to add an objective, please&nbsp;<a href="/todolist/login">Log In</a></h1>}
+                : <h1 className="d-flex align-items-center">In order to add an objective, please&nbsp;<a href="/todolist/login">Log In</a></h1>}
         </div>
-        )
+    )
 }
 
 export default Home

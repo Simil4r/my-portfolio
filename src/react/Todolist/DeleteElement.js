@@ -10,7 +10,17 @@ class DeleteElement extends Component{
         this.deleteElement=this.deleteElement.bind(this)
     }
     deleteElement = () => {
-        axios.post(this.context.link+'/elements/delete', {id: this.props.id})
+        fetch('/.netlify/functions/elementRead', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                id: this.props.id,
+                action: "delete"
+            })
+        })
+        then(response => response.json())
             .then(()=>{
                 this.props.closeWindow();
                 this.props.getElements();

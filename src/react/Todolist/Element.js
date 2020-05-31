@@ -15,7 +15,14 @@ class Element extends Component {
         this.editElement = this.editElement.bind(this)
     }
     done = () => {
-        axios.post(this.context.link+'/elements/check', {id: this.props.id, done: !this.state.done})
+        fetch('/.netlify/functions/elementRead', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({id: this.props.id, done: !this.state.done, action: "check"})
+        })
+        then(response => response.json())
         this.setState(prevState=>{return {done: !prevState.done}})
     }
     deleteElement = () => {
