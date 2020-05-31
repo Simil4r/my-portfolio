@@ -1,18 +1,155 @@
 //variables
 $mint: #00cf91;
+$lightGray: #f1f6fb ;
+$darkerGray: #808285 ;
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+//key-frames
+@keyframes fadeFromLeft {
+    from{
+        margin-left: 0;
+        opacity: 0;
+    }
+    to{
+        margin-left: 80px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeFromRight {
+    from{
+        margin-left: 80px;
+        margin-right: 0;
+        opacity: 0;
+    }
+    to{
+        margin-left: 0;
+        margin-right: 80px;
+        opacity: 1;
+    }
+}
+
 
 //styles
 
 .e-shop{
-    padding: 0;
+    overflow-x: hidden;
+    padding: 0 !important;
     margin: 0;
-    color: $mint;
+    background-color: $lightGray;
+    .e-shop_topbar{
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        .topbar_button{
+            color: $darkerGray;
+            width: 120px;
+            margin: 20px 40px;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.8s, color 0.3s;
+            &:hover{
+                background-color: rgba(150, 150, 150, 1);
+                color: $lightGray;
+            }
+        }
+    }
     .text_left{
+        color: $mint;
         min-height: 100vh;
-        margin-left: 80px;
-        font-size: x-large;
+        h1{
+            font-size: 400%;
+            margin-left: 80px;
+        }
     }
     .image_side{
         min-height: 100vh;
+    }
+    .e-shop_contententry{
+        animation: fade;
+        animation-delay: 0.5s;
+        animation-duration: 4s;
+        .text_left{
+            h1{
+                opacity: 0;
+                text-align: left;
+                animation: fadeFromLeft;
+                animation-duration: 2s;
+                animation-delay: 0.5s;
+                animation-fill-mode: forwards;
+            }
+        }
+        .image_side{
+            background-image: url("../img/image_background_00.png");
+                background-size: 100% 120%;
+                background-position: right bottom;
+            img{
+                width: 60%;
+                height: 80%;
+            }
+        }
+    }
+    .e-shop_contentabout{
+        min-height: 100vh;
+        background-color: $mint;
+        color: $lightGray;
+        .image_side{
+            .imagediv{
+                width: 500px;
+                height: 300px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    transform: translate(-140px, 0) scale(1.8);
+                }
+            }
+        }
+        .text_right{
+            text-align: left;
+            font-size: 110%;
+            span{
+                font-size: 120%;
+                font-weight: bold;
+            }
+        }
+    }
+    .e-shop_contentcolors{
+        min-height: 100vh;
+        h1{
+            margin: 0;
+        }
+        .image_side{
+            background-image: url("../img/image_background_01.png");
+            background-size: 100% 100%;
+            background-position: left top;
+            .pencils{
+                height: 60vh;
+            }
+        }
+    }
+    .e-shop_contentorder{
+        min-height: 100vh;
+        background-color: $mint;
+        .order_button{
+            background-color: $lightGray;
+            color: $mint;
+            font-weight: bolder;
+            border-radius: 10px;
+            padding: 6px 40px;
+            margin: 20px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px black;
+            transition: background-color 0.8s, color 0.3s;
+            &:hover{
+                background-color: $darkerGray;
+                color: $lightGray;
+            }
+        }
     }
 }
