@@ -26,7 +26,7 @@ const Home = () => {
                 action: "select"
             })
         })
-        then(response => response.json())
+        .then(response => response.json())
             .then(res => {
                 setData(res.data)
             })
@@ -45,7 +45,7 @@ const Home = () => {
                 action: "select"
             })
         })
-        then(response => response.json())
+        .then(response => response.json())
             .then(res => {
                 setData(res.data)
             })
