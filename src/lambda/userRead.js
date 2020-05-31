@@ -6,21 +6,29 @@ exports.handler = async (event, context) => {
     context.callbackWaitsForEmptyEventLoop = false
     let obj = JSON.parse(event.body)
     let user;
+    let response = {}
     console.log("WORKING OR NOT?!?!?")
     try {
         switch (obj.action) {
             case "findUser":
                 user = await User.findOne({ username: obj.username })
-                    if (err) return { statusCode: 404, body: JSON.stringify({ err: "error" }) }
                     console.log("user: " + user)
-                    if (user)
+                    if (user){
+                        response = {
+                            data: user
+                        }
                         return {
                             statusCode: 200,
-                            body: JSON.stringify({ data: user })
+                            body: JSON.stringify(response)
                         }
-                    else return {
+                    }
+                    else{
+                        response = {
+                            data: ""
+                        }
+                    } return {
                         statusCode: 200,
-                        body: JSON.stringify({ data: "" })
+                        body: JSON.stringify(response)
                     }
             case "add":
                 bcrypt.hash(obj.password, 10, (err, hash) => {
