@@ -46,7 +46,7 @@ class AddElement extends Component {
             },
             body: JSON.stringify(element)
         })
-        then(response => response.json())
+        .then(response => response.json())
             .then(() => {
                 this.props.closeWindow()
                 this.props.getElements();

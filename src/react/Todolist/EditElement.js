@@ -35,9 +35,17 @@ class AddElement extends Component{
             id: this.props.id,
             title: this.state.title,
             description: this.state.description,
-            date: this.state.date.getDate()+'-'+this.state.date.getMonth()+'-'+this.state.date.getFullYear()
+            date: this.state.date.getDate()+'-'+this.state.date.getMonth()+'-'+this.state.date.getFullYear(),
+            action: "update"
         }
-        axios.post(this.context.link+'/elements/update', element)
+        fetch('/.netlify/functions/elementRead', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(element)
+        })
+        .then(response => response.json())
             .then(()=>{
                 this.props.closeWindow();
                 this.props.getElements();

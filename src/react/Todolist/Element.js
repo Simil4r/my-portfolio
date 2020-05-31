@@ -22,7 +22,7 @@ class Element extends Component {
             },
             body: JSON.stringify({id: this.props.id, done: !this.state.done, action: "check"})
         })
-        then(response => response.json())
+        .then(response => response.json())
         this.setState(prevState=>{return {done: !prevState.done}})
     }
     deleteElement = () => {
