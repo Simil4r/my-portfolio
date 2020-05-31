@@ -20,7 +20,7 @@ class DeleteElement extends Component{
                 action: "delete"
             })
         })
-        then(response => response.json())
+        .then(response => response.json())
             .then(()=>{
                 this.props.closeWindow();
                 this.props.getElements();
