@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
     let obj = JSON.parse(event.body)
     let user;
     let response = {}
-    console.log("WORKING OR NOT?!?!?")
+    console.log("WORKING OR NOT?!??!?")
     try {
         switch (obj.action) {
             case "findUser":
