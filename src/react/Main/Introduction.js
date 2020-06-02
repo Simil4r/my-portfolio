@@ -6,22 +6,10 @@ import Banner from "../../img/banner.jpg"
 
 let Element = Scroll.Element;
 class Introduction extends Component {
-    constructor(props){
-        super(props);
-        this.elem = React.createRef();
-    }
-    componentDidMount(){
-        document.addEventListener("scroll", e=>{ //checks if component is currently on the screen
-            if(window.scrollY===0){
-                this.props.underline();
-            }
-        })
-    }
-
     render(){
         return(
             <Element name="home" className="home">
-                <div className={"d-flex row introduction"} id={"home"} ref={div=>this.elem=div}>
+                <div className={"d-flex row introduction"}>
                         <h1 className={"d-flex col-12 align-self-center justify-content-center"}>Michał Warchoł</h1>
                     <div className="col-12 d-flex justify-content-center align-items-center links">
                         <div className="d-flex col-2 align-items-center justify-content-end link">

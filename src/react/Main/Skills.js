@@ -2,22 +2,10 @@ import React, { Component } from 'react'
 import * as Scroll from "react-scroll"
 
 class Skills extends Component {
-    constructor(props){
-        super(props)
-        this.elem=React.createRef();
-    }
-    componentDidMount(){
-        document.addEventListener("scroll", ()=>{
-            var element = this.elem.getBoundingClientRect();
-            if(element.top<60 && element.bottom>0){
-                this.props.underline();
-            } 
-        })
-    }
     render(){
         return (
             <Scroll.Element name="skills" className="skl d-flex justify-content-center align-items-start">
-                <div className="skills d-flex col-9 flex-column" ref={div=>this.elem=div}>
+                <div className="skills d-flex col-9 flex-column">
                     <h1>Skills</h1>
                     <div className="d-flex col-12 flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start">
                         <div className="d-flex col-6 flex-column align-items-lg-center">

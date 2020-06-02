@@ -5,22 +5,10 @@ import Photo from './Photo';
 let Element = Scroll.Element;
 
 class About extends Component {
-    constructor(props) {
-        super(props)
-        this.elem = React.createRef();
-    }
-    componentDidMount() {
-        document.addEventListener("scroll", () => {
-            var element = this.elem.getBoundingClientRect();
-            if (element.top > 0 && element.top < element.height / 3) {
-                this.props.underline();
-            }
-        })
-    }
     render() {
         return (
             <Element name="about" className="abo d-flex justify-content-center align-items-start">
-                <div className={"about d-flex col-9 flex-column"} id={"about"} ref={div => this.elem = div}>
+                <div className={"about d-flex col-9 flex-column"}>
                     <h1 className={"col-12"}>About</h1>
                     <div className={"d-flex col-12 flex-column flex-lg-row"}>
                         <div className="d-flex col-12 col-lg-8 flex-column">
