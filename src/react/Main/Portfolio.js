@@ -26,7 +26,7 @@ class Portfolio extends Component {
                     <h1 className={"col-12"}>Portfolio</h1>
                     <div className="d-flex col-12 flex-column flex-xl-row">
                         <PortfolioSite title={"E-commerce Store"} img={MWeshop} link={"/e-shop"} gitLink={"#"}/>
-                        <PortfolioSite title={"ToDoList"} img={MWTodolist} link={"/todolist/registration"} gitLink={"https://github.com/Simil4r/portfolio/tree/master/src/react/Todolist"}/>
+                        <PortfolioSite title={"ToDoList"} img={MWTodolist} link={"/todolist"} gitLink={"https://github.com/Simil4r/portfolio/tree/master/src/react/Todolist"}/>
                     </div>
                 </div>
             </Element>

@@ -5,6 +5,7 @@ import Topbar from './Topbar';
 import AddElement from './AddElement';
 import DeleteElement from './DeleteElement';
 import EditElement from './EditElement';
+import {connect} from 'react-redux'
 
 class Content extends Component {
     constructor(props) {
@@ -18,7 +19,6 @@ class Content extends Component {
         this.deleteElement = this.deleteElement.bind(this)
         this.editElement = this.editElement.bind(this)
         this.closeWindow = this.closeWindow.bind(this)
-        this.setDate = this.setDate.bind(this)
     }
     addElement = () => {
         this.setState({ element_addition: true })
@@ -28,9 +28,6 @@ class Content extends Component {
     }
     editElement = (id) => {
         this.setState({element_edit: id})
-    }
-    setDate = (date) => {
-        this.props.handleDate(date);
     }
     closeWindow = () => {
         this.setState({ 
@@ -44,29 +41,31 @@ class Content extends Component {
             <div className='todolist_content d-flex col-12'>
                 <Topbar addElement={this.addElement} handleDate={this.setDate}/>
                 <div className='todolist_content_elements d-flex flex-column col-12 align-items-center'>
-                    {this.props.data.length===0?<NoElements />:this.props.data.map((element, index) => {
+                    {this.props.tasks.length===0?<NoElements />:this.props.tasks.map((element, index) => {
                         return <Element
                             key={element._id}
-                            id={element._id}
+                            id={element.id}
                             title={element.title}
                             description={element.description}
                             done={element.done}
-                            deleteElement={this.deleteElement}
-                            editElement={this.editElement}
+                            deleteElement={this.props.deleteElement}
+                            editElement={this.props.editElement}
                             bgcolor={index%2===0?'#f7f5f3':'#d9d5d1'} />
                     })}
                 </div>
                 {this.state.element_addition
-                    ? <AddElement closeWindow={this.closeWindow} getElements={this.props.getElements} username={this.props.username} />
+                    ? <AddElement 
+                        closeWindow={this.closeWindow} />
                     : null}
                 {this.state.element_deletion
-                    ? <DeleteElement closeWindow={this.closeWindow} getElements={this.props.getElements} id={this.state.element_deletion} />
+                    ? <DeleteElement 
+                        closeWindow={this.closeWindow} 
+                        id={this.state.element_deletion} />
                     : null
                 }
                 {this.state.element_edit
                     ? <EditElement 
-                        closeWindow={this.closeWindow} 
-                        getElements={this.props.getElements} 
+                        closeWindow={this.closeWindow}  
                         id={this.state.element_edit} />
                     :null
                 }
@@ -75,4 +74,10 @@ class Content extends Component {
     }
 }
 
-export default Content;
+const mapStateToProps = state => {
+    return {
+        tasks: state.tasks
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

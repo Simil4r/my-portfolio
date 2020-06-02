@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'
-import {LinkContext} from '../../LinkContext'
-import axios from 'axios'
+import {connect} from "react-redux"
 
 class Element extends Component {
     static contextType = LinkContext
@@ -15,15 +14,8 @@ class Element extends Component {
         this.editElement = this.editElement.bind(this)
     }
     done = () => {
-        fetch('/.netlify/functions/elementRead', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({id: this.props.id, done: !this.state.done, action: "check"})
-        })
-        .then(response => response.json())
         this.setState(prevState=>{return {done: !prevState.done}})
+        this.props.checkTask(this.props.id, this.state.done)
     }
     deleteElement = () => {
         this.props.deleteElement(this.props.id)
@@ -70,4 +62,10 @@ class Element extends Component {
     }
 }
 
-export default Element;
+const mapDispatchToProps = dispatch =>{
+    return {
+        checkTask: (id, title, description, check) => {dispatch({type: 'CHECK_TASK', id: id, title: title, description: description, check: check})}
+    }
+}
+
+export default connect(mapDispatchToProps)(Element);
