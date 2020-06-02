@@ -67,6 +67,9 @@
   .e-shop .image_side {
     min-height: 100vh; }
   .e-shop .e-shop_contententry {
+    background-image: url("../img/image_background_00.png");
+    background-size: 100% 120%;
+    background-position: right bottom;
     -webkit-animation: fade;
     animation: fade;
     -webkit-animation-delay: 0.5s;
@@ -84,13 +87,9 @@
       animation-delay: 0.5s;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards; }
-    .e-shop .e-shop_contententry .image_side {
-      background-image: url("../img/image_background_00.png");
-      background-size: 100% 120%;
-      background-position: right bottom; }
-      .e-shop .e-shop_contententry .image_side img {
-        width: 60%;
-        height: 80%; }
+    .e-shop .e-shop_contententry .image_side img {
+      width: 60%;
+      height: 80%; }
   .e-shop .e-shop_contentabout {
     min-height: 100vh;
     background-color: #00cf91;

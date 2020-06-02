@@ -71,6 +71,9 @@ $darkerGray: #808285 ;
         min-height: 100vh;
     }
     .e-shop_contententry{
+        background-image: url("../img/image_background_00.png");
+        background-size: 100% 120%;
+        background-position: right bottom;
         animation: fade;
         animation-delay: 0.5s;
         animation-duration: 4s;
@@ -85,9 +88,6 @@ $darkerGray: #808285 ;
             }
         }
         .image_side{
-            background-image: url("../img/image_background_00.png");
-                background-size: 100% 120%;
-                background-position: right bottom;
             img{
                 width: 60%;
                 height: 80%;
