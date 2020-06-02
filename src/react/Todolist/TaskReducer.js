@@ -4,7 +4,7 @@ const initState = {
     tasks: []
 }
 
-const cartReducer = (state = initState, action) => {
+const taskReducer = (state = initState, action) => {
     switch(action.type){
         case 'ADD_TASK':
             let newTasks = [...state.tasks, {id: uuidv4(), title: action.title, description: action.description, done: false}]
@@ -36,4 +36,4 @@ const cartReducer = (state = initState, action) => {
     }
 }
 
-export default cartReducer
+export default taskReducer
