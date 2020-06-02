@@ -3,7 +3,6 @@ import {OverlayTrigger, Tooltip} from 'react-bootstrap'
 import {connect} from "react-redux"
 
 class Element extends Component {
-    static contextType = LinkContext
     constructor(props){
         super(props)
         this.state = {
