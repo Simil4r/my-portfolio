@@ -43,13 +43,13 @@ class Content extends Component {
                 <div className='todolist_content_elements d-flex flex-column col-12 align-items-center'>
                     {this.props.tasks.length===0?<NoElements />:this.props.tasks.map((element, index) => {
                         return <Element
-                            key={element._id}
+                            key={element.id}
                             id={element.id}
                             title={element.title}
                             description={element.description}
                             done={element.done}
-                            deleteElement={this.props.deleteElement}
-                            editElement={this.props.editElement}
+                            deleteElement={this.deleteElement}
+                            editElement={this.editElement}
                             bgcolor={index%2===0?'#f7f5f3':'#d9d5d1'} />
                     })}
                 </div>

@@ -26,10 +26,16 @@ class DeleteElement extends Component{
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        tasks: state.tasks
+    }
+}
+
 const mapDispatchToProps = dispatch =>{
     return {
         deleteTask: id => {dispatch({type: 'DELETE_TASK', id: id})}
     }
 }
 
-export default connect(mapDispatchToProps)(DeleteElement);
+export default connect(mapStateToProps, mapDispatchToProps)(DeleteElement);

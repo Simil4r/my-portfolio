@@ -2,9 +2,6 @@ import React,{Component} from 'react'
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'
 
 class Topbar extends Component{
-    constructor(props){
-        super(props)
-    }
     render(){
         return(
             <div className='todolist_topbar d-flex flex-row justify-content-center fixed-top'>

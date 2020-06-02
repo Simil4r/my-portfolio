@@ -61,10 +61,16 @@ class Element extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        tasks: state.tasks
+    }
+}
+
 const mapDispatchToProps = dispatch =>{
     return {
         checkTask: (id, title, description, check) => {dispatch({type: 'CHECK_TASK', id: id, title: title, description: description, check: check})}
     }
 }
 
-export default connect(mapDispatchToProps)(Element);
+export default connect(mapStateToProps, mapDispatchToProps)(Element);

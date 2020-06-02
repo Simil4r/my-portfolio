@@ -53,10 +53,16 @@ class AddElement extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        tasks: state.tasks
+    }
+}
+
 const mapDispatchToProps = dispatch =>{
     return {
         addTask: (title, description) => {dispatch({type: 'ADD_TASK', title: title, description: description})}
     }
 }
 
-export default connect(mapDispatchToProps)(AddElement);
+export default connect(mapStateToProps, mapDispatchToProps)(AddElement);
