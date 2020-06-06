@@ -11,7 +11,7 @@ class Portfolio extends Component {
         return(
             <Element name="portfolio" className="portf d-flex justify-content-center align-items-start">
                 <div className={"portfolio d-flex col-9 flex-column"}>
-                    <h1 className={"col-12"}>Portfolio</h1>
+                    <h1 className={"col-12"}>Portfolioo</h1>
                     <div className="d-flex col-12 flex-column flex-xl-row">
                         <PortfolioSite title={"E-commerce Store"} img={MWeshop} link={"/e-shop"} gitLink={"#"}/>
                         <PortfolioSite title={"ToDoList"} img={MWTodolist} link={"/todolist"} gitLink={"https://github.com/Simil4r/portfolio/tree/master/src/react/Todolist"}/>
