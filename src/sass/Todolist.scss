@@ -1,15 +1,11 @@
 //Variables
 
 $mainBodyColor: #3b3a3a;
-$mainNavbarColor: #d63422;
-$mainColor: #c7c4be;
+$mainColor: #E4FFF9;
 
 $registrationBodyColor: #f1eeea;
 $registrationColor: #3b3a3a;
 $registrationCorrectColor: #2fd089;
-
-$pizzaColor: #f85959;
-$pizzaBodyColor: #ff9f68;
 
 $navbarPaddings: 5px;
 $myPicParams: 200px;
@@ -68,47 +64,27 @@ $myPicParams: 200px;
     }
 }
 
-
 .todolist{
     color: black;
     height: 100%;
     background-image: url('../img/y-so-serious-white.png');
-    .todolist_login, .todolist_registration{
-        width: 60%;
-        p{
-            width: 50%;
-            text-align: center;
-            color: #ff3c35;
-        }
-        .todolist_link{
-            text-align: center;
-            margin-top: 20px;
-        }
-        a{
-            color: #41d6ff;
-            cursor: pointer;
-            &:hover{
-                text-decoration: underline;
-            }
-        }
-    }
     .todolist_content{
         width: 100%;
         .todolist_content_elements{
             margin-top: 100px;
             .todolist_element{
                 background-color: $mainColor;
-                width: 40%;
-                @media (max-width: 576px){
-                    width: 100%;
-                }
-                @media (max-width: 992px){
-                    width: 80%;
-                }
                 padding: 20px;
-                margin-bottom: 30px;
+                margin: 0 10px 30px 10px;
                 border: 2px solid $mainBodyColor;
                 border-radius: 6px;
+                background-color: $registrationCorrectColor;
+                overflow: hidden;
+                .ok_div{
+                    position: relative;
+                    left: -70px;
+                    transition: left 0.5s ease-in-out;
+                }
                 .icon_x{
                     border-radius: 2px;
                     padding: 4px;
@@ -116,6 +92,12 @@ $myPicParams: 200px;
                     &:hover{
                         background-color: rgba(0, 0, 0, 0.3);
                     }
+                }
+                .icons{
+                    position: relative;
+                    top: -70px;
+                    transition: top 0.5s ease-in-out;
+                    transition-delay: 0.2s;
                 }
                 .ok{
                     border: 2px solid $mainBodyColor;
@@ -222,8 +204,9 @@ $myPicParams: 200px;
         margin: 0 auto;
     }
     .done{
-        h1, p{
-            color: grey;
+        background-color: #117243 !important;
+        h1, p, i{
+            color: #E4FFF9;
         }
     }
 }

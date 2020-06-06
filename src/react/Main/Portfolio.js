@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import * as Scroll from "react-scroll"
 import PortfolioSite from "./PortfolioSite";
 import MWTodolist from "../../img/MW Todolist.png";
-import MWeshop from "../../img/MW e-shop.png";
+import MWeshop from "../../img/portfolio_site_default.png";
 
 let Element = Scroll.Element;
 

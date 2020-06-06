@@ -5,7 +5,7 @@ import "../../css/Todolist.css"
 
 const Main = () => {
     return (
-        <div className="todolist container-fluid d-flex justify-content-center">
+        <div className="todolist container-fluid">
             <Content />
         </div>
     )

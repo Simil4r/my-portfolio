@@ -12,12 +12,12 @@ let Element = Scroll.Element
 const ContentColors = () => {
     return (
         <Element name="Colors">
-            <div className="e-shop_contentcolors d-flex flex-column flex-lg-row">
-                <div className="text_left d-flex col-12 col-lg-6 align-items-center justify-content-center">
+            <div className="e-shop_contentcolors d-flex flex-column flex-xl-row">
+                <div className="text_left d-flex col-12 col-xl-5 align-items-center justify-content-center">
                     <h1>Many Colors Available</h1>
                 </div>
-                <div className="image_side d-flex col-12 col-lg-6 justify-content-center align-items-center">
-                    <div className="pencils d-flex flex-row">
+                <div className="image_side d-flex col-12 col-xl-7 justify-content-center align-items-center">
+                    <div className="pencils d-flex flex-column flex-xl-row col-12">
                         <Pencil img={Pencil1} />
                         <Pencil img={Pencil2} />
                         <Pencil img={Pencil3} />

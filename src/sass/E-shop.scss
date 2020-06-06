@@ -53,6 +53,9 @@ $darkerGray: #808285 ;
             font-weight: bold;
             border-radius: 4px;
             transition: background-color 0.8s, color 0.3s;
+            @media(max-width: 768px){
+                margin: 20px 0px;
+            }
             &:hover{
                 background-color: rgba(150, 150, 150, 1);
                 color: $lightGray;
@@ -71,9 +74,6 @@ $darkerGray: #808285 ;
         min-height: 100vh;
     }
     .e-shop_contententry{
-        background-image: url("../img/image_background_00.png");
-        background-size: 100% 120%;
-        background-position: right bottom;
         animation: fade;
         animation-delay: 0.5s;
         animation-duration: 4s;
@@ -89,7 +89,7 @@ $darkerGray: #808285 ;
         }
         .image_side{
             img{
-                width: 60%;
+                width: 500px;
                 height: 80%;
             }
         }
@@ -99,14 +99,17 @@ $darkerGray: #808285 ;
         background-color: $mint;
         color: $lightGray;
         .image_side{
-            .imagediv{
-                width: 500px;
-                height: 300px;
-                overflow: hidden;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    transform: translate(-140px, 0) scale(1.8);
+            .content{
+                background-image: url("../img/laurels.png");
+                background-size: 100% 100%;
+                padding: 0 90px;
+                height: 120px;
+                background-color: $mint;
+                transition: opacity 1.5s, top 1.5s;
+                position: relative;
+                h1{
+                    text-align: center;
+                    font-size: 400%;
                 }
             }
         }
@@ -125,11 +128,16 @@ $darkerGray: #808285 ;
             margin: 0;
         }
         .image_side{
-            background-image: url("../img/image_background_01.png");
-            background-size: 100% 100%;
-            background-position: left top;
             .pencils{
-                height: 60vh;
+                min-height: 60vh;
+                .pencil{
+                    height: 60vh;
+                    transition: transform 1s;
+                    margin: 20px;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
             }
         }
     }

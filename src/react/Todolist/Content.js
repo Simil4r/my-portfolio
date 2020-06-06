@@ -38,10 +38,10 @@ class Content extends Component {
     }
     render = () => {
         return (
-            <div className='todolist_content d-flex col-12'>
+            <div className='todolist_content d-flex'>
                 <Topbar addElement={this.addElement} handleDate={this.setDate}/>
-                <div className='todolist_content_elements d-flex flex-column col-12 align-items-center'>
-                    {this.props.tasks.length===0?<NoElements />:this.props.tasks.map((element, index) => {
+                <div className='todolist_content_elements d-flex flex-row flex-wrap col-12 justify-content-center'>
+                    {this.props.tasks.length===0?<NoElements />:this.props.tasks.map((element) => {
                         return <Element
                             key={element.id}
                             id={element.id}
@@ -49,8 +49,7 @@ class Content extends Component {
                             description={element.description}
                             done={element.done}
                             deleteElement={this.deleteElement}
-                            editElement={this.editElement}
-                            bgcolor={index%2===0?'#f7f5f3':'#d9d5d1'} />
+                            editElement={this.editElement} />
                     })}
                 </div>
                 {this.state.element_addition

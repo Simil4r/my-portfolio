@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class NoElements extends Component {
     render() {
         return (
-            <div>
+            <div className="d-flex align-items-center flex-column flex-grow-1">
                 <h1 className='d-flex justify-content-center'>
                     You have nothing to do today!
             </h1>
