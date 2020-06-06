@@ -2,43 +2,39 @@
   color: black;
   height: 100%;
   background-image: url("../img/y-so-serious-white.png"); }
-  .todolist .todolist_login, .todolist .todolist_registration {
-    width: 60%; }
-    .todolist .todolist_login p, .todolist .todolist_registration p {
-      width: 50%;
-      text-align: center;
-      color: #ff3c35; }
-    .todolist .todolist_login .todolist_link, .todolist .todolist_registration .todolist_link {
-      text-align: center;
-      margin-top: 20px; }
-    .todolist .todolist_login a, .todolist .todolist_registration a {
-      color: #41d6ff;
-      cursor: pointer; }
-      .todolist .todolist_login a:hover, .todolist .todolist_registration a:hover {
-        text-decoration: underline; }
   .todolist .todolist_content {
     width: 100%; }
     .todolist .todolist_content .todolist_content_elements {
       margin-top: 100px; }
       .todolist .todolist_content .todolist_content_elements .todolist_element {
-        background-color: #c7c4be;
-        width: 40%;
+        background-color: #E4FFF9;
         padding: 20px;
-        margin-bottom: 30px;
+        margin: 0 10px 30px 10px;
         border: 2px solid #3b3a3a;
-        border-radius: 6px; }
-        @media (max-width: 576px) {
-          .todolist .todolist_content .todolist_content_elements .todolist_element {
-            width: 100%; } }
-        @media (max-width: 992px) {
-          .todolist .todolist_content .todolist_content_elements .todolist_element {
-            width: 80%; } }
+        border-radius: 6px;
+        background-color: #2fd089;
+        overflow: hidden; }
+        .todolist .todolist_content .todolist_content_elements .todolist_element .ok_div {
+          position: relative;
+          left: -70px;
+          -webkit-transition: left 0.5s ease-in-out;
+          -o-transition: left 0.5s ease-in-out;
+          transition: left 0.5s ease-in-out; }
         .todolist .todolist_content .todolist_content_elements .todolist_element .icon_x {
           border-radius: 2px;
           padding: 4px;
           cursor: pointer; }
           .todolist .todolist_content .todolist_content_elements .todolist_element .icon_x:hover {
             background-color: rgba(0, 0, 0, 0.3); }
+        .todolist .todolist_content .todolist_content_elements .todolist_element .icons {
+          position: relative;
+          top: -70px;
+          -webkit-transition: top 0.5s ease-in-out;
+          -o-transition: top 0.5s ease-in-out;
+          transition: top 0.5s ease-in-out;
+          -webkit-transition-delay: 0.2s;
+          -o-transition-delay: 0.2s;
+          transition-delay: 0.2s; }
         .todolist .todolist_content .todolist_content_elements .todolist_element .ok {
           border: 2px solid #3b3a3a;
           border-radius: 4px;
@@ -155,7 +151,7 @@
           width: 50%; }
         .todolist .todolist_addelement .todolist_e_element_content .todolist_e_element_form input {
           margin: 8px;
-          border: 2px solid #c7c4be;
+          border: 2px solid #E4FFF9;
           border-radius: 10px;
           outline: 0; }
           .todolist .todolist_addelement .todolist_e_element_content .todolist_e_element_form input:focus {
@@ -205,7 +201,7 @@
           width: 50%; }
         .todolist .todolist_deleteelement .todolist_e_element_content .todolist_e_element_form input {
           margin: 8px;
-          border: 2px solid #c7c4be;
+          border: 2px solid #E4FFF9;
           border-radius: 10px;
           outline: 0; }
           .todolist .todolist_deleteelement .todolist_e_element_content .todolist_e_element_form input:focus {
@@ -255,7 +251,7 @@
           width: 50%; }
         .todolist .todolist_editelement .todolist_e_element_content .todolist_e_element_form input {
           margin: 8px;
-          border: 2px solid #c7c4be;
+          border: 2px solid #E4FFF9;
           border-radius: 10px;
           outline: 0; }
           .todolist .todolist_editelement .todolist_e_element_content .todolist_e_element_form input:focus {
@@ -273,5 +269,7 @@
     font-weight: bold;
     cursor: pointer;
     margin: 0 auto; }
-  .todolist .done h1, .todolist .done p {
-    color: grey; }
+  .todolist .done {
+    background-color: #117243 !important; }
+    .todolist .done h1, .todolist .done p, .todolist .done i {
+      color: #E4FFF9; }

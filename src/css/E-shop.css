@@ -55,6 +55,9 @@
       -webkit-transition: background-color 0.8s, color 0.3s;
       -o-transition: background-color 0.8s, color 0.3s;
       transition: background-color 0.8s, color 0.3s; }
+      @media (max-width: 768px) {
+        .e-shop .e-shop_topbar .topbar_button {
+          margin: 20px 0px; } }
       .e-shop .e-shop_topbar .topbar_button:hover {
         background-color: #969696;
         color: #f1f6fb; }
@@ -67,9 +70,6 @@
   .e-shop .image_side {
     min-height: 100vh; }
   .e-shop .e-shop_contententry {
-    background-image: url("../img/image_background_00.png");
-    background-size: 100% 120%;
-    background-position: right bottom;
     -webkit-animation: fade;
     animation: fade;
     -webkit-animation-delay: 0.5s;
@@ -88,22 +88,25 @@
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards; }
     .e-shop .e-shop_contententry .image_side img {
-      width: 60%;
+      width: 500px;
       height: 80%; }
   .e-shop .e-shop_contentabout {
     min-height: 100vh;
     background-color: #00cf91;
     color: #f1f6fb; }
-    .e-shop .e-shop_contentabout .image_side .imagediv {
-      width: 500px;
-      height: 300px;
-      overflow: hidden; }
-      .e-shop .e-shop_contentabout .image_side .imagediv img {
-        width: 100%;
-        height: 100%;
-        -webkit-transform: translate(-140px, 0) scale(1.8);
-        -ms-transform: translate(-140px, 0) scale(1.8);
-        transform: translate(-140px, 0) scale(1.8); }
+    .e-shop .e-shop_contentabout .image_side .content {
+      background-image: url("../img/laurels.png");
+      background-size: 100% 100%;
+      padding: 0 90px;
+      height: 120px;
+      background-color: #00cf91;
+      -webkit-transition: opacity 1.5s, top 1.5s;
+      -o-transition: opacity 1.5s, top 1.5s;
+      transition: opacity 1.5s, top 1.5s;
+      position: relative; }
+      .e-shop .e-shop_contentabout .image_side .content h1 {
+        text-align: center;
+        font-size: 400%; }
     .e-shop .e-shop_contentabout .text_right {
       text-align: left;
       font-size: 110%; }
@@ -114,12 +117,20 @@
     min-height: 100vh; }
     .e-shop .e-shop_contentcolors h1 {
       margin: 0; }
-    .e-shop .e-shop_contentcolors .image_side {
-      background-image: url("../img/image_background_01.png");
-      background-size: 100% 100%;
-      background-position: left top; }
-      .e-shop .e-shop_contentcolors .image_side .pencils {
-        height: 60vh; }
+    .e-shop .e-shop_contentcolors .image_side .pencils {
+      min-height: 60vh; }
+      .e-shop .e-shop_contentcolors .image_side .pencils .pencil {
+        height: 60vh;
+        -webkit-transition: -webkit-transform 1s;
+        transition: -webkit-transform 1s;
+        -o-transition: transform 1s;
+        transition: transform 1s;
+        transition: transform 1s, -webkit-transform 1s;
+        margin: 20px; }
+        .e-shop .e-shop_contentcolors .image_side .pencils .pencil:hover {
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2); }
   .e-shop .e-shop_contentorder {
     min-height: 100vh;
     background-color: #00cf91; }
