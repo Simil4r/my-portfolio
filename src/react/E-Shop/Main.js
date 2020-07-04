@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ContentEntry from './ContentEntry'
 import ContentAbout from './ContentAbout'
 import ContentColors from './ContentColors'
@@ -7,9 +7,6 @@ import Topbar from './Topbar'
 import "../../css/E-shop.css"
 
 const Main = () => {
-    useEffect(()=>{
-        window.scrollTo(0, 0);
-    }, [])
     return(
         <div className="e-shop container-fluid">
             <Topbar />

@@ -1,19 +1,26 @@
 //variables
 $mint: #00cf91;
-$lightGray: #f1f6fb ;
+$lightGray: #e7e7e7;
 $darkerGray: #808285 ;
 
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+
+//fonts
+@font-face{
+    font-family: 'Open Sans';
+    src: local('Open Sans'), url('../fonts/Open Sans/OpenSans-Regular.ttf');
+}
+
 //key-frames
 @keyframes fadeFromLeft {
     from{
-        margin-left: 0;
+        transform: translateX(-80px);
         opacity: 0;
     }
     to{
-        margin-left: 80px;
+        transform: translateX(0);
         opacity: 1;
     }
 }
@@ -35,10 +42,10 @@ $darkerGray: #808285 ;
 //styles
 
 .e-shop{
-    overflow-x: hidden;
     padding: 0 !important;
     margin: 0;
     background-color: $lightGray;
+    overflow-x: hidden;
     .e-shop_topbar{
         z-index: 2;
         position: fixed;
@@ -46,8 +53,8 @@ $darkerGray: #808285 ;
         width: 100%;
         .topbar_button{
             color: $darkerGray;
-            width: 120px;
-            margin: 20px 40px;
+            width: 80px;
+            margin: 20px 10px;
             padding: 10px;
             cursor: pointer;
             font-weight: bold;
@@ -64,20 +71,18 @@ $darkerGray: #808285 ;
     }
     .text_left{
         color: $mint;
-        min-height: 100vh;
+        min-height: 50vh;
         h1{
             font-size: 400%;
-            margin-left: 80px;
         }
-    }
-    .image_side{
-        min-height: 100vh;
     }
     .e-shop_contententry{
         animation: fade;
         animation-delay: 0.5s;
         animation-duration: 4s;
+        font-family: "Open Sans";
         .text_left{
+            min-height: 100vh;
             h1{
                 opacity: 0;
                 text-align: left;
@@ -90,32 +95,35 @@ $darkerGray: #808285 ;
         .image_side{
             img{
                 width: 500px;
-                height: 80%;
+                height: 800px;
             }
         }
     }
     .e-shop_contentabout{
-        min-height: 100vh;
+        min-height: 70vh;
         background-color: $mint;
-        color: $lightGray;
+        color: white;
         .image_side{
-            .content{
+            text-align: center;
+            margin-top: 80px;
+            .laurels{
+                margin: 20px 0;
                 background-image: url("../img/laurels.png");
                 background-size: 100% 100%;
-                padding: 0 90px;
-                height: 120px;
-                background-color: $mint;
-                transition: opacity 1.5s, top 1.5s;
-                position: relative;
+                font-size: 200%;
+                transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
                 h1{
-                    text-align: center;
-                    font-size: 400%;
+                    font-size: 200%;
                 }
             }
         }
         .text_right{
             text-align: left;
             font-size: 110%;
+            margin-top: 80px;
+            h1{
+                text-align: center;
+            }
             span{
                 font-size: 120%;
                 font-weight: bold;
@@ -123,20 +131,23 @@ $darkerGray: #808285 ;
         }
     }
     .e-shop_contentcolors{
+        font-family: "Open Sans";
         min-height: 100vh;
-        h1{
-            margin: 0;
+        .text_left{
+            height: 100vh;
+            h1{
+                margin: 0;
+                width: 100%;
+            }
         }
         .image_side{
             .pencils{
                 min-height: 60vh;
                 .pencil{
                     height: 60vh;
-                    transition: transform 1s;
-                    margin: 20px;
-                    &:hover{
-                        transform: scale(1.2);
-                    }
+                    transform: translateX(50px);
+                    opacity: 0;
+                    transition: opacity 1s, transform 1s;
                 }
             }
         }
@@ -144,12 +155,13 @@ $darkerGray: #808285 ;
     .e-shop_contentorder{
         min-height: 100vh;
         background-color: $mint;
+        margin: 0 !important;
         .order_button{
             background-color: $lightGray;
             color: $mint;
             font-weight: bolder;
             border-radius: 10px;
-            padding: 6px 40px;
+            padding: 6px 30px;
             margin: 20px;
             cursor: pointer;
             box-shadow: 2px 2px 10px black;
@@ -158,6 +170,9 @@ $darkerGray: #808285 ;
                 background-color: $darkerGray;
                 color: $lightGray;
             }
+        }
+        .copyright{
+            margin-bottom: 20px;
         }
     }
 }

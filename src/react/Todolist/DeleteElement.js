@@ -15,7 +15,7 @@ class DeleteElement extends Component{
         return(
             <div className='todolist_deleteelement'>
                 <div className='todolist_e_element_content d-flex flex-column justify-content-center'>
-                    <h1>You want to delete the task!</h1>
+                    <h1>Are you sure?</h1>
                     <div className='todolist_e_element_form d-flex flex-row justify-content-around align-items-center'>
                         <SubmitButton text='OK' click={this.deleteElement} />
                         <SubmitButton text='Cancel' click={this.props.closeWindow} />

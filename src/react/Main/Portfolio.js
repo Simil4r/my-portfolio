@@ -2,11 +2,16 @@ import React, {Component} from "react";
 import * as Scroll from "react-scroll"
 import PortfolioSite from "./PortfolioSite";
 import MWTodolist from "../../img/MW Todolist.png";
-import MWeshop from "../../img/portfolio_site_default.png";
+import MWeshop from "../../img/MW e-shop.png";
 
 let Element = Scroll.Element;
 
 class Portfolio extends Component {
+
+    componentWillUnmount(){
+        window.scrollTo({top: 0, left: 0});
+    }
+
     render(){
         return(
             <Element name="portfolio" className="portf d-flex justify-content-center align-items-start">

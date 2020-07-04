@@ -7,8 +7,9 @@ class Navbar extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            visible: true
+            visible: false
         }
+        this.ref = React.createRef()
         this.handleClick = this.handleClick.bind(this)
         this.styleVisible = {
             left: 0
@@ -18,6 +19,12 @@ class Navbar extends Component {
         }
         this.styleRotated = {
             transform: 'rotate(90deg)'
+        }
+        this.styleDefault = {
+            borderBottom: "none"
+        }
+        this.styleUnderlined = {
+            borderBottom: "0.1vw solid #3b3a3a"
         }
     }
 
@@ -39,6 +46,7 @@ class Navbar extends Component {
                         <Link activeClass="active" to="home" smooth={true} duration={500}>
                             <span
                                 className={"navbar_element"}
+                                style={this.props.navbarButtonScrolled === 0 ? this.styleUnderlined : this.styleDefault}
                             >Home</span>
                         </Link>
                     </li>
@@ -46,6 +54,7 @@ class Navbar extends Component {
                         <Link activeClass="active" to="about" smooth={true} duration={500}>
                             <span
                                 className={"navbar_element"}
+                                style={this.props.navbarButtonScrolled === 1 ? this.styleUnderlined : this.styleDefault}
                             >About</span>
                         </Link>
                     </li>
@@ -53,6 +62,7 @@ class Navbar extends Component {
                         <Link activeClass="active" to="skills" smooth={true} duration={500}>
                             <span
                                 className={"navbar_element"}
+                                style={this.props.navbarButtonScrolled === 2 ? this.styleUnderlined : this.styleDefault}
                             >Skills</span>
                         </Link>
                     </li>
@@ -60,6 +70,7 @@ class Navbar extends Component {
                         <Link activeClass="active" to="portfolio" smooth={true} duration={500}>
                             <span
                                 className={"navbar_element"}
+                                style={this.props.navbarButtonScrolled === 3 ? this.styleUnderlined : this.styleDefault}
                             >Portfolio</span>
                         </Link>
                     </li>
@@ -67,6 +78,7 @@ class Navbar extends Component {
                         <Link activeClass="active" to="contact" smooth={true} duration={500}>
                             <span
                                 className={"navbar_element"}
+                                style={this.props.navbarButtonScrolled === 4 ? this.styleUnderlined : this.styleDefault}
                             >Contact</span>
                         </Link>
                     </li>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import NoElements from './NoElements'
 import Element from './Element';
+import NewElement from './NewElement'
 import Topbar from './Topbar';
 import AddElement from './AddElement';
 import DeleteElement from './DeleteElement';
@@ -38,10 +38,10 @@ class Content extends Component {
     }
     render = () => {
         return (
-            <div className='todolist_content d-flex'>
+            <div className='todolist_content container d-flex'>
                 <Topbar addElement={this.addElement} handleDate={this.setDate}/>
-                <div className='todolist_content_elements d-flex flex-row flex-wrap col-12 justify-content-center'>
-                    {this.props.tasks.length===0?<NoElements />:this.props.tasks.map((element) => {
+                <div className='todolist_content_elements d-flex flex-row flex-wrap col-12 justify-content-around'>
+                    {this.props.tasks.map((element) => {
                         return <Element
                             key={element.id}
                             id={element.id}
@@ -51,6 +51,7 @@ class Content extends Component {
                             deleteElement={this.deleteElement}
                             editElement={this.editElement} />
                     })}
+                    <NewElement addElement={this.addElement} />
                 </div>
                 {this.state.element_addition
                     ? <AddElement 

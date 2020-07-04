@@ -30,22 +30,34 @@ class AddElement extends Component{
                     <div className='todolist_editelement_icons d-flex justify-content-end'>
                         <i className='icon-cancel' onClick={this.props.closeWindow}></i>
                     </div>
-                    <h1 className='text-break'>Edit The Activity</h1>
+                    <h1 className='text-break'>Editing</h1>
                     <div className='todolist_e_element_form d-flex flex-column align-items-center'>
-                        <input 
-                            type='text' 
-                            name='title' 
-                            onChange={this.setTitle} 
-                            placeholder='title (max 50 letters)'
-                            maxLength={50}/>
-                        <input 
-                            type='text' 
-                            name='description' 
-                            onChange={this.setDescription} 
-                            placeholder='description (max 150 letters)'
-                            maxLength={150}/>
-                        <SubmitButton text='Add' click={this.editElement} />
+                    <div className="todolist_input d-flex col-6 flex-column">
+                            <label htmlFor="inp1" className="inp">
+                                <input 
+                                    type="text" 
+                                    id="inp1" 
+                                    placeholder="&nbsp;"
+                                    onChange={this.setTitle} 
+                                    maxLength={50} />
+                                <span className="label">title (max 50 letters)</span>
+                                <span className="focus-bg"></span>
+                            </label>
+                        </div>
+                        <div className="todolist_input d-flex col-6 flex-column">
+                            <label htmlFor="inp2" className="inp">
+                                <input 
+                                    type="text" 
+                                    id="inp2" 
+                                    placeholder="&nbsp;"
+                                    onChange={this.setDescription}
+                                    maxLength={150} />
+                                <span className="label">description (max 150 letters)</span>
+                                <span className="focus-bg"></span>
+                            </label>
+                        </div>
                     </div>
+                    <SubmitButton text='Save' click={this.editElement} />
                 </div>
             </div>
         )

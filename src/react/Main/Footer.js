@@ -4,10 +4,14 @@ import * as Scroll from "react-scroll"
 let Element = Scroll.Element;
 
 class Footer extends Component {
+    constructor(props) {
+        super(props)
+        this.ref = React.createRef()
+    }
     render() {
         return (
             <Element name="contact" className="cont">
-                <div className={"d-flex contact"}>
+                <div className={"d-flex contact"} id={"contact"} ref={div => this.ref = div}>
                     <div className="d-flex container justify-content-center flex-column justify-content-md-around flex-md-row">
                         <div className="d-flex col-3">
                             <div className={"d-flex flex-column justify-content-center contacts"}>

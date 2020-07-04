@@ -7,7 +7,7 @@ let Element = Scroll.Element
 const ContentEntry = () => {
     return (
         <Element name="Home">
-            <div className="e-shop_contententry d-flex flex-column flex-md-row">
+            <div className="e-shop_contententry container d-flex flex-column flex-md-row">
                 <div className="text_left d-flex col-12 col-md-6 align-items-center">
                     <h1>The Ultimate Pencil<br></br>To Write More</h1>
                 </div>

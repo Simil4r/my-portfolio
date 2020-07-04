@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from "./Navbar"
 import Introduction from "./Introduction"
 import About from "./About"
@@ -7,20 +7,19 @@ import Skills from './Skills'
 import Footer from "./Footer"
 
 function Main() {
-  const [navbarButton, setNavbarButton] = useState(0);
 
   return (
     <div className={"main container-fluid d-flex flex-column"}>
-      <Introduction underline={() => setNavbarButton(0)} />
-      <Navbar navbarButtonScrolled={navbarButton} />
+      <Introduction  />
+      <Navbar />
       <div className="container-fluid content">
         <div className="container">
-          <About underline={() => setNavbarButton(1)} />
-          <Skills underline={() => setNavbarButton(2)} />
-          <Portfolio underline={() => setNavbarButton(3)} />
+          <About />
+          <Skills />
+          <Portfolio />
         </div>
       </div>
-      <Footer underline={() => setNavbarButton(4)} />
+      <Footer />
     </div>
   )
 }
