@@ -1,6 +1,6 @@
 import React from 'react'
 import * as Scroll from 'react-scroll'
-import Image from '../../img/pencil_01.png'
+import Image from '../../img/pencil_01-min.png'
 
 let Element = Scroll.Element
 
