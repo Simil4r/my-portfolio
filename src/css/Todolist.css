@@ -99,11 +99,11 @@
     .todolist .todolist_addelement .todolist_e_element_content {
       background-color: white;
       width: 50vw;
-      height: 50vh;
+      height: 60vh;
       border-radius: 20px; }
       @media (max-height: 720px) {
         .todolist .todolist_addelement .todolist_e_element_content {
-          height: 360px; } }
+          height: 420px; } }
       @media (max-width: 992px) {
         .todolist .todolist_addelement .todolist_e_element_content {
           width: 496px; } }
@@ -221,11 +221,11 @@
     .todolist .todolist_deleteelement .todolist_e_element_content {
       background-color: white;
       width: 50vw;
-      height: 50vh;
+      height: 60vh;
       border-radius: 20px; }
       @media (max-height: 720px) {
         .todolist .todolist_deleteelement .todolist_e_element_content {
-          height: 360px; } }
+          height: 420px; } }
       @media (max-width: 992px) {
         .todolist .todolist_deleteelement .todolist_e_element_content {
           width: 496px; } }
@@ -343,11 +343,11 @@
     .todolist .todolist_editelement .todolist_e_element_content {
       background-color: white;
       width: 50vw;
-      height: 50vh;
+      height: 60vh;
       border-radius: 20px; }
       @media (max-height: 720px) {
         .todolist .todolist_editelement .todolist_e_element_content {
-          height: 360px; } }
+          height: 420px; } }
       @media (max-width: 992px) {
         .todolist .todolist_editelement .todolist_e_element_content {
           width: 496px; } }
@@ -449,7 +449,7 @@
       margin-top: 30px; }
   .todolist .todolist_submitbutton {
     width: 160px;
-    height: 48px;
+    height: 52px;
     border-radius: 30px;
     background-color: #757780;
     color: white;
