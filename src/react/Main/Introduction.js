@@ -23,7 +23,7 @@ class Introduction extends Component {
                             </a> 
                         </div>
                         <div className="d-flex col-1 align-items-center justify-content-center link">
-                            <a href="https://github.com/Simil4r">
+                            <a href="https://github.com/michalwarchol">
                                 <img src={Github} alt="not found" />
                             </a>
                         </div>

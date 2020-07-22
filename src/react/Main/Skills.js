@@ -16,16 +16,17 @@ class Skills extends Component {
                             <h2>Excellent:</h2>
                             <ul>
                                 <li>JavaScript</li>
-                                <li>React/Redux</li>
+                                <li>React</li>
                                 <li>HTML</li>
                                 <li>CSS</li>
                                 <li>Bootstrap</li>
+                                <li>SASS</li>
                             </ul>
                         </div>
                         <div className="d-flex col-6 flex-column align-items-lg-center">
                             <h2>Familiar:</h2>
                             <ul>
-                                <li>Sass</li>
+                                <li>Typescript</li>
                                 <li>Node.js</li>
                                 <li>Express</li>
                                 <li>MongoDB</li>

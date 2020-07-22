@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import * as Scroll from "react-scroll"
 import PortfolioSite from "./PortfolioSite";
 import MWTodolist from "../../img/MW Todolist.png";
-import MWeshop from "../../img/MW e-shop.png";
+import MWFandom from "../../img/MW Fandom.png";
 
 let Element = Scroll.Element;
 
@@ -18,8 +18,8 @@ class Portfolio extends Component {
                 <div className={"portfolio d-flex col-9 flex-column"}>
                     <h1 className={"col-12"}>Portfolio</h1>
                     <div className="d-flex col-12 flex-column flex-xl-row">
-                        <PortfolioSite title={"E-commerce Store"} img={MWeshop} link={"/e-shop"} gitLink={"#"}/>
-                        <PortfolioSite title={"ToDoListt"} img={MWTodolist} link={"/todolist"} gitLink={"https://github.com/Simil4r/portfolio/tree/master/src/react/Todolist"}/>
+                        <PortfolioSite title={"Breaking Bad Fandom"} img={MWFandom} external={true} link={"http://breakingbadfandom.netlify.app"} gitLink={"https://github.com/michalwarchol/breakingbadfandom"}/>
+                        <PortfolioSite title={"ToDoList"} img={MWTodolist} external={false} link={"/todolist"} gitLink={"https://github.com/michalwarchol/portfolio/tree/master/src/react/Todolist"}/>
                     </div>
                 </div>
             </Element>

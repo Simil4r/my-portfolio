@@ -21,7 +21,7 @@ class Footer extends Component {
                             </div>
                         </div>
                         <div className="d-flex col-6 visits flex-column align-self-center align-items-center">
-                            <span>Visit my <a href="https://github.com/Simil4r">Github</a></span>
+                            <span>Visit my <a href="https://github.com/michalwarchol">Github</a></span>
                             <span>Visit my <a href="https://www.linkedin.com/in/micha%C5%82-warcho%C5%82-2033a51a0">Linkedin</a></span>
                         </div>
                     </div>
