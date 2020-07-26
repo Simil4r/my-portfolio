@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import * as Scroll from "react-scroll"
 import PortfolioSite from "./PortfolioSite";
-import MWSecrets from '../../img/MW SecretsOfMountains.PNG';
-import MWTodolist from "../../img/MW Todolist.PNG";
-import MWeshop from "../../img/MW Fandom.PNG";
+import MWSecrets from '../img/MW SecretsOfMountains.PNG';
+import MWTodolist from "../img/MW Todolist.PNG";
+import MWeshop from "../img/MW Fandom.PNG";
 
 let Element = Scroll.Element;
 
@@ -19,7 +19,7 @@ class Portfolio extends Component {
                 <div className={"portfolio d-flex col-9 flex-column"}>
                     <h1 className={"col-12"}>Portfolio</h1>
                     <div className="d-flex col-12 flex-column flex-xl-row flex-wrap">
-                        <PortfolioSite title={"Secrets of Mountains"} img={MWSecrets} external={true} link={"http://breakingbadfandom.netlify.app"} gitLink={"https://github.com/michalwarchol/breakingbadfandom"}/>
+                        <PortfolioSite title={"Secrets of Mountains"} img={MWSecrets} external={true} link={"https://secretsofmountains.netlify.app"} gitLink={"https://github.com/michalwarchol/secretsofmountains"}/>
                         <PortfolioSite title={"Breaking Bad Fandom"} img={MWeshop} external={true} link={"http://breakingbadfandom.netlify.app"} gitLink={"https://github.com/michalwarchol/breakingbadfandom"}/>
                         <PortfolioSite title={"ToDoList"} img={MWTodolist} external={false} link={"/todolist"} gitLink={"https://github.com/michalwarchol/portfolio/tree/master/src/react/Todolist"}/>
                     </div>
