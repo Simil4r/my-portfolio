@@ -4,7 +4,6 @@ import PortfolioSite from "./PortfolioSite";
 import MWSecrets from '../img/MW SecretsOfMountains.png';
 import MWTodolist from "../img/MW Todolist.png";
 import MWeshop from "../img/MW Fandom.png";
-import MWeshop from "../img/"
 
 let Element = Scroll.Element;
 
