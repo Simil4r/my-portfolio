@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import * as Scroll from "react-scroll"
 import PortfolioSite from "./PortfolioSite";
-import MWSecrets from '../img/MW SecretsOfMountains.png';
+import MWSecrets from "../img/MW SecretsOfMountains.png";
 import MWTodolist from "../img/MW Todolist.png";
 import MWeshop from "../img/MW Fandom.png";
 
