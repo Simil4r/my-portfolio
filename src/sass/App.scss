@@ -206,15 +206,19 @@ body{
     text-align: center;
     border-radius: 20px;
     background-color: $secondBodyColor;
-}
-.portfolio_site_image{
-    overflow: hidden;
-    img{
-        border-radius: 10px;
-        width: 100%;
-        transition: transform 1s ease-in-out;
-        &:hover{
-            transform: scale(1.1);
+    .portfolio_site{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .portfolio_site_image{
+            overflow: hidden;
+            border-radius: 10px;
+            img{
+                width: 100%;
+                transition: transform 1s ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
         }
     }
 }

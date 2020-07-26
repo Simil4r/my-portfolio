@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const PortfolioSite = props => {
     return (
-        <div className="col-12 col-xl-6">
+        <div className="portfolio_site col-12 col-xl-6">
             <h2>{props.title}</h2>
             {props.external ?
                 <a href={props.link}>
