@@ -19,7 +19,7 @@ class Portfolio extends Component {
                 <div className={"portfolio d-flex col-9 flex-column"}>
                     <h1 className={"col-12"}>Portfolio</h1>
                     <div className="d-flex col-12 flex-column flex-xl-row flex-wrap">
-                        <PortfolioSite title={"Secrets of Mountains"} img={MWSecrets} external={true} link={"https://secretsofmountains.netlify.app"} gitLink={"https://github.com/michalwarchol/secretsofmountains"}/>
+                        
                         <PortfolioSite title={"Breaking Bad Fandom"} img={MWeshop} external={true} link={"http://breakingbadfandom.netlify.app"} gitLink={"https://github.com/michalwarchol/breakingbadfandom"}/>
                         <PortfolioSite title={"ToDoList"} img={MWTodolist} external={false} link={"/todolist"} gitLink={"https://github.com/michalwarchol/portfolio/tree/master/src/react/Todolist"}/>
                     </div>
