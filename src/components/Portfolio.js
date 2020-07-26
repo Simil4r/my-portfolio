@@ -1,9 +1,10 @@
 import React, {Component} from "react";
 import * as Scroll from "react-scroll"
 import PortfolioSite from "./PortfolioSite";
-import MWSecrets from '../img/MW SecretsOfMountains.PNG';
-import MWTodolist from "../img/MW Todolist.PNG";
-import MWeshop from "../img/MW Fandom.PNG";
+import MWSecrets from '../img/MW SecretsOfMountains.png';
+import MWTodolist from "../img/MW Todolist.png";
+import MWeshop from "../img/MW Fandom.png";
+import MWeshop from "../img/"
 
 let Element = Scroll.Element;
 
