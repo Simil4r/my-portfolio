@@ -1,0 +1,14 @@
+$mainBodyColor: #303030;
+$secondBodyColor: #222222;
+$color: #2e8696;
+$mainColor: #ebebeb;
+
+$navbarPaddings: 5px;
+$myPicParams: 200px;
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@font-face {
+    font-family: 'Muli';
+    src: local('Muli'), url('../fonts/Muli/static/Muli-Regular.ttf') format('truetype');
+  }

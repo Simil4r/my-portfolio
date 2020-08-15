@@ -3,7 +3,7 @@ import Portrait from "../img/portrait.jpg"
 
 const Photo = () => {
     return(
-        <div className={"d-flex about_photo col-12 col-sm-12 col-md-12 col-lg-4 col-lx-4 justify-content-center"}>
+        <div className={"d-flex about_photo col-12 col-sm-4 justify-content-center align-items-start"}>
             <img src={Portrait} alt="not found" />
         </div>
     )

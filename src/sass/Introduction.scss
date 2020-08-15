@@ -1,0 +1,33 @@
+.introduction{
+    color: white;
+    font-family: "Muli";
+    background-color: $secondBodyColor;
+    background-image: url("../img/background.png");
+    background-position: right;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    @media(max-width: 992px){
+        h1{
+            font-size: 48px;
+        }
+    }
+    @media(min-width: 992px){
+        h1{
+            font-size: 72px;
+        }
+    }
+    @media(min-width: 1400px){
+        h1{
+            font-size: 128px;
+        }
+    }
+    h1{
+        padding: 0;
+        margin: 0;
+    }
+    h5{
+        color: lighten($color: $mainBodyColor, $amount: 20);
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,38 @@
+.contact{
+    margin: 0;
+    background-color: $secondBodyColor;
+    background-image: url("../img/background.png");
+    background-position: right;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    height: 90vh;
+    .content{
+        margin-left: 20px;
+    }
+    h1{
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    h2{
+        margin-bottom: 20px;
+        a{
+            text-decoration: none;
+            color: $color;
+        }
+    }
+    @media(max-width: 992px){
+        h2{
+            font-size: 26px;
+        }
+    }
+    @media(min-width: 992px){
+        h2{
+            font-size: 48px;
+        }
+    }
+    @media(min-width: 1400px){
+        h2{
+            font-size: 60px;
+        }
+    }
+}
