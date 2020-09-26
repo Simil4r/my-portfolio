@@ -47,6 +47,12 @@ const About = () => {
                 <h1>My Story</h1>
                 <div className="d-flex flex-column">
                     <Achivement
+                        header="College"
+                        title="October 2020 - present : Politechnika Krakowska"
+                        description="I have started my IT studies at Politechnika Krakowska."
+                        icon="icon-graduation-cap"
+                    />
+                    <Achivement
                         header="Upper Secondary School"
                         title="August 2016 - May 2020 : Zespół Szkół Łączności w Krakowie"
                         description="I have finished upper secodary school at Zespół Szkół Łączności in Cracow. My expanded subjects were math and IT."
@@ -57,12 +63,7 @@ const About = () => {
                         description="During upper secondary school I passed E12, E13 and E14 exams."
                         icon="icon-file-code"
                     />
-                    <Achivement
-                        header="College"
-                        title="September 2020"
-                        description="I intend to go to IT extramural studies from September 2020."
-                        icon="icon-graduation-cap"
-                    />
+
                 </div>
             </div>
         </Element>

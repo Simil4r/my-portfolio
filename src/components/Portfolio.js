@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PortfolioSite from "./PortfolioSite";
 import MWNetrunners from '../img/MW Netrunners.png';
-import MWSecrets from '../img/MW SecretsOfMountains.PNG';
+import MWSecrets from '../img/MW SecretsOfMountains.png';
 import MWTodolist from "../img/MW Todolist.png";
 import MWFandom from "../img/MW Fandom.png";
 

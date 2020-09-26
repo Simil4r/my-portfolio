@@ -9,7 +9,7 @@ const Footer = () => {
                     <h1>Contact Me</h1>
                     <h2>mwarchol33@gmail.com</h2>
                     <h2>Visit my <a href="https://github.com/michalwarchol">Github</a></h2>
-                    <h2>Visit my <a href="https://www.linkedin.com/in/micha%C5%82-warcho%C5%82-2033a51a0">Linkedin</a></h2>
+                    <h2>Visit my <a href="https://www.linkedin.com/in/michal-warchol">Linkedin</a></h2>
                     <Button text="Go Back To Top" destination="home" duration={3000} />
                 </div>
             </div>
