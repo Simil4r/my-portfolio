@@ -31,6 +31,7 @@
 .introduction h1 {
   padding: 0;
   margin: 0;
+  font-weight: normal;
 }
 .introduction h5 {
   color: #636363;
@@ -76,29 +77,6 @@
   width: 80%;
   box-shadow: 0 0 10px black;
 }
-.about .achivement {
-  background-color: #222222;
-  border-left: 2px solid #2e8696;
-  margin: 20px 0;
-  padding: 20px;
-}
-.about .achivement .icon {
-  font-size: 200%;
-  color: #2e8696;
-  margin-right: 20px;
-}
-.about .achivement_info {
-  margin: 0 10px;
-}
-.about .achivement_info h3 {
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-.about .achivement_info h4 {
-  font-size: 90%;
-  color: #636363;
-  margin-bottom: 20px;
-}
 
 .portfolio {
   margin-top: 20px;
@@ -106,11 +84,6 @@
   padding-top: 40px;
   padding-bottom: 30px;
   border-radius: 20px;
-}
-.portfolio h1 {
-  color: white;
-  margin-left: 20px;
-  font-weight: bold;
 }
 .portfolio .portfolio_site {
   margin-top: 20px;
@@ -214,6 +187,36 @@ body {
   background-color: #303030;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.achivement {
+  background-color: #222222;
+  border-left: 2px solid #2e8696;
+  margin: 20px 0;
+  padding: 20px;
+}
+.achivement .icon {
+  font-size: 200%;
+  color: #2e8696;
+  margin-right: 20px;
+}
+.achivement_info {
+  margin: 0 10px;
+}
+.achivement_info h3 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.achivement_info h4 {
+  font-size: 90%;
+  color: #636363;
+  margin-bottom: 20px;
 }
 
 .button {
