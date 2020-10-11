@@ -16,7 +16,6 @@ class Portfolio extends Component {
                         <PortfolioSite title={"Net Runners"} img={MWNetrunners} link={"http://netrunners.netlify.app"} gitLink={"https://github.com/michalwarchol/netrunners"} />
                         <PortfolioSite title={"Secrets of Mountains"} img={MWSecrets} link={"http://secretsofmountains.netlify.app"} gitLink={"https://github.com/michalwarchol/secretsofmountains"} />
                         <PortfolioSite title={"Breaking Bad Fandom"} img={MWFandom} link={"http://breakingbadfandom.netlify.app"} gitLink={"https://github.com/michalwarchol/breakingbadfandom"}/>
-                        <PortfolioSite title={"ToDoList"} img={MWTodolist} link={"http://mwtodolist.netlify.app"} gitLink={"https://github.com/michalwarchol/todolist"}/>
                     </div>
                 </div>
         )
